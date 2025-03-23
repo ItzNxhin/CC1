@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> lista = new ArrayList<>();
         Random x = new Random();
-        int y;
 
         for(int i = 0; i<10; i++){
             lista.add(x.nextInt(11)+1);

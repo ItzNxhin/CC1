@@ -10,10 +10,13 @@ import java.util.Random;
 import mergeSort.*;
 import javax.swing.JOptionPane;
 
+import burbuja.Burbuja;
+
 public class RUN {
 	public static void main(String[] args) {
 		int contador=0;
 		MergeSort mergeSort = new MergeSort(contador);
+        Burbuja burble = new Burbuja();
 		ArrayList<Integer> lista = new ArrayList<Integer>();
         Random x = new Random();
         
@@ -45,16 +48,15 @@ public class RUN {
         } else if (seleccion == 1) {
         	//CASO BURBUJA
             System.out.println("Se ha seleccionado Burbuja.");
-            // burbuja();  
+            burble.ordenar(lista);
+            System.out.println("lista ordenada: " + lista);
+            System.out.println("Numero de procesos: "+burble.getContador());
+            System.out.println("f(n): " + (TAM*(TAM-1))/2);
         } else {
             // En caso de que el usuario cierre la ventana o no elija nada
             System.out.println("No se seleccionó ninguna opción.");
             System.exit(0);
         }
-    
-        
-        
-
 	}
 	// MÉTODOS
     public static void asignarAleatorios(ArrayList<Integer> lista, Random x, int TAM) {
