@@ -45,6 +45,7 @@ public class RUN {
             mergeSort.mergeSort(lista, 0, lista.size() - 1); 
             System.out.println("lista ordenada: " + lista);  
             System.out.println("Numero de procesos: "+mergeSort.getContador());
+            System.out.println("f(n): " + (TAM - 1 + TAM*(int)(Math.log(TAM) / Math.log(2))));
         } else if (seleccion == 1) {
         	//CASO BURBUJA
             System.out.println("Se ha seleccionado Burbuja.");
