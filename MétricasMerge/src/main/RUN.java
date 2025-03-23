@@ -45,14 +45,14 @@ public class RUN {
             mergeSort.mergeSort(lista, 0, lista.size() - 1); 
             System.out.println("lista ordenada: " + lista);  
             System.out.println("Numero de procesos: "+mergeSort.getContador());
-            System.out.println("f(n): " + (TAM - 1 + TAM*(int)(Math.log(TAM) / Math.log(2))));
+            System.out.println("f(n): " + (TAM - 1 + TAM*(int)(Math.log(TAM) / Math.log(2)))); //ecucación merge sort
         } else if (seleccion == 1) {
         	//CASO BURBUJA
             System.out.println("Se ha seleccionado Burbuja.");
             burble.ordenar(lista);
             System.out.println("lista ordenada: " + lista);
             System.out.println("Numero de procesos: "+burble.getContador());
-            System.out.println("f(n): " + (TAM*(TAM-1))/2);
+            System.out.println("f(n): " + (TAM*(TAM-1))/2); //Ecuacion burbuja
         } else {
             // En caso de que el usuario cierre la ventana o no elija nada
             System.out.println("No se seleccionó ninguna opción.");
