@@ -20,10 +20,10 @@ public class MergeSort {
         if (left < right) {
             int mid = left + (right - left) / 2;
 
-            mergeSort(lista, left, mid);  // Sort the left half
-            mergeSort(lista, mid + 1, right);  // Sort the right half
+            mergeSort(lista, left, mid);  // Clasificar la mitad izquierda
+            mergeSort(lista, mid + 1, right);  // Clasificar la mitad derecha
 
-            ordenar(lista, left, mid, right);  // Merge the two halves
+            ordenar(lista, left, mid, right);  // unir las dos mitades
             
             
         }
@@ -32,8 +32,8 @@ public class MergeSort {
     public void ordenar(ArrayList<Integer> lista, int left, int mid, int right) {
     	
         //Sublistas en las que se empiezan a ordenar
-        ArrayList<Integer> izquierda = new ArrayList<Integer>(lista.subList(left, mid + 1)); // [left, mid]
-        ArrayList<Integer> derecha = new ArrayList<Integer>(lista.subList(mid + 1, right + 1)); // [mid + 1, right]
+        ArrayList<Integer> izquierda = new ArrayList<Integer>(lista.subList(left, mid + 1)); 
+        ArrayList<Integer> derecha = new ArrayList<Integer>(lista.subList(mid + 1, right + 1)); 
 
         int i = 0, j = 0;
         int k = left;
@@ -57,14 +57,14 @@ public class MergeSort {
             contador+=1;
         }
 
-        // Copy remaining elements of izquierda
+        // COPIAR LOS ELEMENTOS DE LA IZQUIERDA
         while (i < izquierda.size()) {
             lista.set(k, izquierda.get(i));
             i++;
             k++;
         }
 
-        // Copy remaining elements of derecha
+        // COPIAR LOS ELEMENTOS DELA DERECHA
         while (j < derecha.size()) {
             lista.set(k, derecha.get(j));
             j++;

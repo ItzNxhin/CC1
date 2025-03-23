@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Burbuja { 
     private int contador;
 
+    // CONSTRUCTOR
     public Burbuja() {
         contador = 0;
     }
