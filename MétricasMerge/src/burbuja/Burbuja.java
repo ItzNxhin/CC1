@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Burbuja { 
     private int contador;
 
+    // CONSTRUCTOR
     public Burbuja() {
         contador = 0;
     }
 
+    //METODOS
     public void ordenar(ArrayList<Integer> lista) {
         for(int i2 = 0; i2<lista.size()-1 ; i2++){
             contador++;
