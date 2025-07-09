@@ -92,3 +92,12 @@ class AVLTree:
         if node is None or node.left is None:
             return node
         return self.get_min_value_node(node.left)
+
+    def preorder(self, root, result=None):
+        if result is None:
+            result = []
+        if root:
+            result.append(root.value)
+            self.preorder(root.left, result)
+            self.preorder(root.right, result)
+        return result

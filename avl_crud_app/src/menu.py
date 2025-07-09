@@ -89,7 +89,10 @@ def crud_menu(filename):
         elif choice == '4':
             value = input("Enter value to delete: ")
             crud.delete(value)
-            values = [v for v in values if v != value]
+            try:
+                values.remove(value)  # Remove only the first occurrence
+            except ValueError:
+                pass
             write_json(path, values)
             print("Value deleted.")
 

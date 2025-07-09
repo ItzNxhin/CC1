@@ -19,10 +19,8 @@ class AVLTree:
             return AVLNode(value)
         if value < root.value:
             root.left = self.insert(root.left, value)
-        elif value > root.value:
+        else:  # Allow duplicates: insert to the right
             root.right = self.insert(root.right, value)
-        else:
-            return root  # Duplicate values not allowed
 
         root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
         balance = self.get_balance(root)
